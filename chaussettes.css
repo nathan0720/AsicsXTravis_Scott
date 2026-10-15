@@ -1,0 +1,218 @@
+/* =========================================================
+   ASICS x Travis Scott - Fiche produit : Chaussettes Cactus Dust
+   Le seul element cliquable est le logo ASICS (index.html).
+   ========================================================= */
+
+:root {
+  --asics-blue: #001e63;
+  --navy: #071f61;
+  --rating: #435fc7;
+  --pale: #f7f7f7;
+  --line: #e5e9f0;
+  --footer: #f1f3f4;
+  --width: 1010px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; color: var(--asics-blue); background: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; }
+.page-width { width: min(calc(100% - 40px), var(--width)); margin-inline: auto; }
+
+/* Ligne d'information situee AU-DESSUS du menu */
+.utility-bar { min-height: 30px; background: #f5f6f7; font-size: 10px; }
+.utility-inner { min-height: 30px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.utility-offer { display: flex; align-items: center; min-width: 0; gap: 8px; letter-spacing: .015em; white-space: nowrap; }
+.utility-offer-text { max-width: 398px; overflow: hidden; text-overflow: ellipsis; }
+.utility-offer strong { font-size: 10px; font-weight: 700; }
+.utility-offer svg { margin-left: 7px; }
+.utility-right { display: flex; align-items: center; justify-content: flex-end; gap: 14px; font-size: 9.5px; white-space: nowrap; }
+.utility-country { display: flex; align-items: center; gap: 5px; }
+
+/* Menu ASICS. Tous les items sont de simples textes/illustrations. */
+.site-header { position: sticky; top: 0; z-index: 10; background: #fff; }
+.header-inner { height: 65px; display: flex; align-items: center; gap: 26px; }
+.brand-logo { width: 83px; flex: 0 0 83px; display: inline-flex; align-items: center; text-decoration: none; cursor: pointer; }
+.asics-logo { width: 83px; height: auto; }
+.brand-logo:focus-visible { outline: 2px solid var(--asics-blue); outline-offset: 6px; border-radius: 2px; }
+.main-navigation { display: flex; align-items: center; justify-content: space-between; gap: 19px; flex: 1 1 auto; white-space: nowrap; font-size: 12.5px; }
+.main-navigation span { cursor: default; }
+.header-icons { margin-left: auto; display: flex; flex: 0 0 auto; align-items: center; gap: 12px; }
+.header-icon { position: relative; display: grid; place-items: center; width: 20px; height: 23px; }
+.header-icon svg { width: 19px; height: 19px; stroke: var(--asics-blue); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.member-mark { position: absolute; bottom: -3px; right: -5px; width: 14px; height: 14px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; line-height: 1; color: var(--asics-blue); background: #e7ad37; }
+
+/* Banderole ajoutee ENTRE le menu et les photos */
+.collection-banner { min-height: 39px; padding: 10px 18px; background: var(--asics-blue); color: #fff; display: flex; align-items: center; justify-content: center; gap: 18px; text-align: center; font-size: 11.5px; font-weight: 500; letter-spacing: .06em; }
+.collection-banner-label { font-weight: 700; letter-spacing: .10em; }
+.collection-banner-divider { display: inline-block; height: 15px; width: 1px; background: rgba(255,255,255,.52); }
+
+/* Mise en page produit : 648px de galerie + 312px d'informations */
+.product-layout { display: grid; grid-template-columns: minmax(0, 648px) minmax(0, 312px); gap: 50px; align-items: start; }
+.gallery-and-story { min-width: 0; }
+.product-gallery { display: flex; flex-direction: column; gap: 6px; }
+.product-photo { width: 100%; aspect-ratio: 648 / 519; margin: 0; overflow: hidden; background: var(--pale); }
+.product-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+
+/* Description affichee sous les 3 images */
+.product-description { margin: 30px 0 0; line-height: 1.55; font-size: 12.4px; }
+.product-description p { margin: 0 0 7px; }
+
+/* Partie droite du produit */
+.product-details { position: sticky; top: -275px; align-self: start; min-width: 0; padding-top: 2px; }
+.breadcrumbs { font-size: 11px; line-height: 24px; }
+.bullet { display: inline-block; padding: 0 5px; font-weight: 700; }
+.title-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 7px; }
+h1 { margin: 0; font-size: 19px; line-height: 27px; letter-spacing: -.02em; font-weight: 700; }
+.title-heart { width: 18px; height: 18px; flex: 0 0 18px; margin-right: 6px; stroke: var(--asics-blue); stroke-width: 1.8; stroke-linejoin: round; }
+.reviews { display: flex; align-items: center; gap: 9px; margin-top: 10px; white-space: nowrap; font-size: 10px; }
+.rating-stars { color: var(--rating); font-size: 16.5px; letter-spacing: -1.5px; line-height: 19px; }
+.rating-count { margin-left: 1px; }
+.review-text { margin-left: 1px; }
+.product-price { margin: 8px 0 0; padding-bottom: 11px; font-size: 15px; font-weight: 700; border-bottom: 1px solid var(--line); }
+
+.product-options { padding-top: 11px; }
+.option-line { display: flex; align-items: center; gap: 5px; margin: 0 0 13px; font-size: 12px; }
+.option-line strong, .size-heading strong { font-weight: 700; }
+.size-heading { margin: 3px 0 10px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; }
+.size-guide { display: flex; align-items: center; gap: 4px; text-decoration: underline; text-underline-offset: 2px; font-size: 11px; }
+.size-guide svg { width: 20px; height: 20px; stroke: var(--asics-blue); stroke-width: 1; }
+.sizes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 10px; row-gap: 7px; }
+.sizes span { width: 100%; height: 30px; border: 1px solid #e9edf2; border-radius: 100px; display: flex; justify-content: center; align-items: center; font-size: 11px; background: #fff; }
+.fit-advice { min-height: 68px; margin-top: 13px; padding: 14px 14px 12px; background: #f6f6f6; border-radius: 6px; display: flex; align-items: flex-start; gap: 11px; font-size: 12px; line-height: 19px; }
+.fit-advice > svg { width: 17px; height: 17px; flex: 0 0 17px; stroke: var(--asics-blue); stroke-width: 1.7; stroke-linecap: round; margin-top: 1px; }
+.fit-advice strong { font-weight: 700; }
+.select-size-look { height: 32px; margin-top: 12px; background: #092366; border-radius: 999px; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; cursor: default; }
+
+.benefits { margin-top: 12px; border: 1px solid #e3eaf4; border-radius: 6px; overflow: hidden; font-size: 11.5px; }
+.benefit-row { position: relative; padding: 11px 12px 11px 37px; min-height: 46px; border-bottom: 1px solid #e3eaf4; line-height: 15px; }
+.benefit-row:last-child { border-bottom: 0; min-height: 35px; }
+.benefit-members { padding-top: 11px; padding-bottom: 12px; min-height: 63px; }
+.benefit-medal { position: absolute; left: 11px; top: 9px; width: 17px; height: 17px; stroke: var(--asics-blue); stroke-width: 1; }
+.visual-link { text-decoration: underline; text-underline-offset: 2px; cursor: default; }
+
+/* Grand pied de page reproduit depuis la capture */
+.site-footer { margin-top: 36px; background: var(--footer); }
+.footer-container { padding-top: 43px; padding-bottom: 15px; }
+.footer-grid { display: grid; grid-template-columns: 300px repeat(4, minmax(0, 1fr)); gap: 44px; min-height: 352px; }
+.footer-grid h2 { margin: 0 0 10px; font-size: 13.7px; line-height: 18px; font-weight: 700; }
+.footer-newsletter p { max-width: 275px; color: #758093; font-size: 11.5px; line-height: 15px; margin: 0 0 14px; }
+.newsletter-look { width: 255px; max-width: 100%; height: 31px; display: grid; place-items: center; border-radius: 100px; background: #092366; color: white; font-size: 11px; font-weight: 700; cursor: default; }
+.footer-newsletter .follow-title { margin: 19px 0 10px; }
+.social-icons { display: flex; align-items: center; gap: 12px; }
+.social-item { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: var(--asics-blue); color: #fff; font-size: 16px; font-weight: 700; line-height: 1; cursor: default; }
+.social-facebook { font-family: Arial, sans-serif; font-size: 16px; padding-top: 4px; }
+.social-x { font-size: 13px; font-weight: 400; }
+.social-item svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.7; }
+.social-linkedin { font-size: 12px; }
+.footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; font-size: 11.5px; line-height: 16px; }
+.footer-column h2 { margin-bottom: 0; }
+.footer-column span { display: block; cursor: default; }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 14px; padding-top: 20px; font-size: 10.8px; }
+.bottom-country { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.copyright { white-space: nowrap; color: #52668c; }
+
+/* Layout adaptatif pour les petits ecrans */
+@media (max-width: 1120px) {
+  .main-navigation { gap: 11px; font-size: 11px; }
+  .header-inner { gap: 19px; }
+  .header-icons { gap: 9px; }
+  .product-layout { grid-template-columns: minmax(0, 1.9fr) minmax(285px, 1fr); gap: 30px; }
+  .footer-grid { grid-template-columns: 275px repeat(4, minmax(0, 1fr)); gap: 22px; }
+  .utility-right { gap: 8px; }
+}
+@media (max-width: 920px) {
+  .utility-offer-text { max-width: 300px; }
+  .utility-right span:not(.utility-country) { display: none; }
+  .header-inner { gap: 12px; }
+  .main-navigation { overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+  .main-navigation::-webkit-scrollbar { display: none; }
+  .main-navigation span { flex: 0 0 auto; }
+  .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 23px; }
+  .footer-newsletter { grid-column: 1 / -1; }
+  .footer-newsletter p { max-width: 310px; }
+  .footer-grid { min-height: unset; }
+  .footer-bottom { margin-top: 28px; }
+}
+@media (max-width: 740px) {
+  .page-width { width: min(calc(100% - 28px), var(--width)); }
+  .utility-bar { min-height: 27px; }
+  .utility-inner { min-height: 27px; }
+  .utility-offer-text { max-width: calc(100vw - 180px); }
+  .utility-offer strong, .utility-offer svg, .utility-right { display: none; }
+  .header-inner { height: 60px; }
+  .brand-logo { flex-basis: 75px; width: 75px; }
+  .asics-logo { width: 75px; }
+  .header-icons { gap: 7px; }
+  .header-icon { width: 18px; }
+  .header-icon svg { width: 18px; }
+  .collection-banner { gap: 7px; padding: 10px 12px; flex-wrap: wrap; line-height: 17px; font-size: 10px; }
+  .collection-banner-divider { display: none; }
+  .product-layout { grid-template-columns: 1fr; gap: 25px; }
+  .product-photo { aspect-ratio: 1.22; }
+  .product-description { margin-top: 20px; }
+  .product-details { position: static; }
+  .sizes { grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .site-footer { margin-top: 35px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 25px; }
+  .footer-newsletter { grid-column: 1 / -1; }
+}
+@media (max-width: 410px) {
+  .main-navigation { font-size: 10.5px; }
+  .header-icons { gap: 3px; }
+  .header-icon:last-child { display: none; }
+  .sizes { grid-template-columns: repeat(5, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; column-gap: 15px; }
+  .footer-grid h2 { font-size: 12.5px; }
+  .footer-column { font-size: 11px; }
+}
+
+/* Adaptations spécifiques aux chaussettes : deux photos au ratio 4:3. */
+.product-photo { aspect-ratio: 4 / 3; background: #fff; }
+.product-photo img { object-fit: contain; }
+.capsule-label { font-size: 10px; font-weight: 700; letter-spacing: .045em; color: #435fc7; }
+.socks-sizes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.socks-sizes span { height: 35px; }
+@media (max-width: 740px) {
+  .product-photo { aspect-ratio: 4 / 3; }
+  .socks-sizes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* === BANDEAU ASICS × TRAVIS SCOTT : ADRESSE ET RENDEZ-VOUS === */
+.collection-banner {
+  min-height: 78px; padding: 16px clamp(16px, 3vw, 48px);
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 12px clamp(14px, 2.1vw, 30px);
+  background: #001e63; color: #fff;
+  font-family: Arial, Helvetica, sans-serif; line-height: 1.4;
+}
+.collection-banner-label {
+  font-size: clamp(14px, 1.25vw, 19px); font-weight: 800;
+  letter-spacing: .06em; line-height: 1.3; white-space: nowrap;
+}
+.collection-banner-divider {
+  display: inline-block; width: 1px; height: 31px;
+  background: rgba(255,255,255,.55);
+}
+.collection-banner-details {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 10px clamp(15px, 2.1vw, 30px);
+}
+.collection-banner-address, .collection-banner-date {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  font-size: clamp(12px, .98vw, 15px); font-weight: 500;
+  letter-spacing: .01em; line-height: 1.45; text-align: center;
+}
+.collection-banner-address { color: #fff; text-decoration: none; text-underline-offset: 4px; }
+.collection-banner-address:hover, .collection-banner-address:focus-visible { text-decoration: underline; }
+.collection-banner-details svg { width: 18px; height: 18px; flex: 0 0 18px; }
+.collection-banner-date strong { font-weight: 800; }
+@media (max-width: 780px) {
+  .collection-banner { flex-direction: column; min-height: 95px; gap: 9px; padding: 16px 12px; }
+  .collection-banner-divider { display: none; }
+  .collection-banner-label { font-size: 16px; }
+  .collection-banner-details { flex-direction: column; gap: 7px; }
+  .collection-banner-address, .collection-banner-date { font-size: 12px; }
+}
+/* Show the entire product photo, without cropping it in narrow cards. */
+.collection-card__visual img { object-fit: contain; }
